@@ -1,0 +1,7 @@
+﻿  FruitSelection.cpp
+C:\Users\vell6\source\repos\HealthApp\HealthApp\FruitSelection.cpp(28): error C2065: 'fruitMap': undeclared identifier
+C:\Users\vell6\source\repos\HealthApp\HealthApp\FruitSelection.cpp(29): error C2065: 'nutritionFruits': undeclared identifier
+C:\Users\vell6\source\repos\HealthApp\HealthApp\FruitSelection.cpp(29): error C2065: 'fruitMap': undeclared identifier
+C:\Users\vell6\source\repos\HealthApp\HealthApp\FruitSelection.cpp(31): error C2065: 'nutritionFruits': undeclared identifier
+  HealthApp.cpp
+  Generating Code...
