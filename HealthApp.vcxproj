@@ -154,10 +154,12 @@
     <ClCompile Include="FruitSelection.cpp" />
     <ClCompile Include="HealthApp.cpp" />
     <ClCompile Include="NutritionRequest.cpp" />
+    <ClCompile Include="VegetableSelection.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FruitSelection.h" />
     <ClInclude Include="NutritionRequest.h" />
+    <ClInclude Include="VegetableSelection.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

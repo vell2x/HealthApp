@@ -3,6 +3,7 @@
 
 #include "NutritionRequest.h"
 #include "FruitSelection.h"
+#include "VegetableSelection.h"
 #include <iostream>
 #include <string>
 using namespace std;
@@ -23,6 +24,9 @@ int main()
 	string input = "";
 	NutritionRequest request;
 	FruitSelection fruit;
+	VegetableSelection vegetable;
+	bool nutritionRequestCompleted = false;
+	vector<string> nutritionList;
 
 	cout << "Welcome to the Nutritionst!" << endl;
 	displayMenu();
@@ -34,20 +38,44 @@ int main()
 		switch (userSelection)
 		{
 		case 1:
-			cout << "Please enter nutrient" << endl;
-			cin >> input;
-			request.AddItemToList(input);
+			request.AddItemToList();
+			nutritionRequestCompleted = true;
 			break;
 		case 2:
 			request.PrintList();
+			break;
+		case 3:
+			if (nutritionRequestCompleted)
+			{
+				vector<string> addToList = fruit.GetRequestedFruits(request.getList());
+				nutritionList.reserve(nutritionList.size() + addToList.size());
+				nutritionList.insert(nutritionList.end(), addToList.begin(), addToList.end());
+			}
+			break;
+		case 4:
+			if (nutritionRequestCompleted)
+			{
+				vector<string> addToList = vegetable.GetRequestedVegetables(request.getList());
+				nutritionList.reserve(nutritionList.size() + addToList.size());
+				nutritionList.insert(nutritionList.end(), addToList.begin(), addToList.end());
+			}
+			break;
+		default:
+			cout << "Invalid value! Please try again." << endl;
 			break;
 		}
 		displayMenu();
 
 		cin >> userSelection;
 	}
-	request.~NutritionRequest();
-	fruit.~FruitSelection();
+	cout << "Thank you for using the Nutritionst! Here is your recommended nutrition list:" << endl;
+	for (auto i = nutritionList.begin(); i != nutritionList.end(); i++)
+	{
+		cout << *i << endl;
+	}
+	//request.~NutritionRequest();
+	//fruit.~FruitSelection();
+	//vegetable.~VegetableSelection();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

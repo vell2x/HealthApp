@@ -9,8 +9,9 @@ class NutritionRequest
 public:
 	NutritionRequest();
 	~NutritionRequest();
-	void AddItemToList(string addItem);
+	void AddItemToList();
 	void PrintList();
+	vector<string> getList();
 
 private:
 	vector<string> list;

@@ -24,12 +24,18 @@
     <ClCompile Include="FruitSelection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VegetableSelection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NutritionRequest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FruitSelection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VegetableSelection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

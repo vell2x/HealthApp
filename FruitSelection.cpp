@@ -1,7 +1,5 @@
 #include "FruitSelection.h"
 
-
-
 FruitSelection::FruitSelection()
 {
 	fruitMap.insert(pair<string, string>("Eye Health", "Oranges"));
@@ -21,7 +19,12 @@ FruitSelection::~FruitSelection()
 {
 }
 
-vector<string> GetRequestedFruits(vector<string> list)
+vector<string> FruitSelection::GetRequestedFruits(vector<string> list)
 {
-	
+	for (auto i = list.begin(); i != list.end(); i++)
+	{
+		if (fruitMap.find(*i) != fruitMap.end())
+			nutritionFruits.push_back(fruitMap.at(*i));
+	}
+	return nutritionFruits;
 }
